@@ -1,0 +1,307 @@
+/** ------------------------------------------------------------------
+							Wrapper Screen
+------------------------------------------------------------------ **/
+@media only screen and (min-width: 769px) and (max-width: 1444px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/** ------------------------------------------------------------------
+							Tab Screen
+------------------------------------------------------------------ **/
+@media only screen and (max-width: 991px) {
+.home_service_wrapper .row > div {
+	-ms-flex: 0 0 33.333333%;
+flex: 0 0 33.333333%;
+max-width: 33.333333%;
+}
+}
+
+/** ------------------------------------------------------------------
+							Mobile Screen
+------------------------------------------------------------------ **/
+@media only screen and (max-width: 768px ) {
+.section_title h2 {
+	font-size: 22px;
+}
+.referral_hero_img {
+	height: 140px;
+}
+.referral_hero_details {
+	padding: 180px 20px 40px 20px;
+}
+.referral_hero_details_title h1 {
+	font-size: 28px;
+	line-height: 125%;
+}
+.referral_promo_area {
+	padding: 0 25px;
+}
+.single_post_related_post {
+	padding: 40px 0 0 0;
+}
+.blog_page_single_blog {
+	padding: 14px 0;
+	border-radius: 0;
+}
+.post_content_wrapper {
+	padding: 0;
+}
+.post_content_title h1 {
+	font-size: 24px;
+}
+.post_content_title {
+	margin-bottom: 20px;
+}
+.single_post_content p {
+	font-size: 16px;
+	line-height: 195%;
+}
+.blog_page_posts .row {
+	margin: -5px -15px;
+}
+.blog_page_posts .row > div{
+	padding: 5px 15px;
+}
+.howitwork_about_area .height-space {
+	height: 40px !important;
+}
+.howitwork_about_area {
+	background: #f4f4f4;
+	text-align: center;
+}
+.page-template-page-service .home_hero_details_title h2, .page-template-page-service .home_hero_details_title h1 {
+	font-size: 28px;
+}
+.desktopview {
+	display: none;
+}
+.mobileview {
+	display: block;
+}
+.header-mobile-menu-trigger {
+	display: block;
+}
+.header_menu {
+	display: none;
+}
+.header_cta_button ul li:last-child {
+	display: none;
+}
+.header_logo img {
+	height: 50px;
+}
+.header_logo {
+	margin-top: 0;
+	padding: 10px 0 10px 35px;
+}
+.header_cta_button {
+	margin-top: 23px;
+}
+.home_hero_details {
+	padding: 120px 0;
+}
+.home_hero_details_btns ul li a {
+	padding: 16px 26px;
+}
+.home_hero_details_title h2, .home_hero_details_title h1 {
+	font-size: 40px;
+}
+.footer_widget_box2 {
+	margin-top: 25px;
+}
+.footer_cta {
+	margin-top: 25px;
+}
+.footer_bottom_menu {
+	margin-top: 15px;
+	float: left !important;
+}
+.bottom_promo_box {
+	padding: 0 20px;
+}
+.height-space {
+	height: 70px !important;
+}
+.section_content_btn a {
+	padding: 15px 28px;
+}
+.section_content_btn {
+	margin-top: 30px;
+}
+.home_service_wrapper {
+	padding: 0 40px;
+}
+.home_howitworks_wrapper .row > div:first-child .single_howitworks_box_number span:before {
+	display: none;
+}
+.single_howitworks_box_number {
+	display: none;
+}
+.home_hero_form input {
+	font-size: 16px;
+}
+.home_hero_form form {
+	max-width: 314px;
+}
+.home_hero_details_title p {
+	font-size: 17px;
+	margin-top: 8px;
+}
+.footer_newslettertitle {
+	margin-top: 30px;
+}
+.subscribe_popup_img {
+	display: none;
+}
+.subscribe_popup_content_box {
+	padding-right: 0;
+}
+.subscribe_popup_content_box_form {
+	padding: 55px 25px 25px 25px;
+}
+.subscribe_popup_content_box_form_title h2 {
+	font-size: 28px;
+	line-height: 36px;
+}
+.subscribe_popup_content_box_form_title p {
+	margin-top: 7px;
+}
+.home_video_box svg {
+	height: 70px !important;
+	width: 70px !important;
+}
+.home_video_box a:hover svg {
+	height: 90px !important;
+	width: 90px !important;
+}
+#booking_popup_btn {
+	top: 25px;
+	right: 20px;
+}
+.booking_pop_area_main {
+	padding-top: 55px;
+}
+.booking_popup_box_form_title h2 {
+	font-size: 33px;
+}
+.booking_popup_box_form .row {
+	margin: -10px -10px;
+}
+.booking_popup_box_form .row > div {
+	padding: 10px 10px;
+}
+.booking_popup_box {
+	padding: 0 10px;
+}
+.how_we_work_benefits_area {
+	padding: 60px 0;
+}
+.howwework_hero .home_hero_details_title h2, .howwework_hero .home_hero_details_title h1 {
+	font-size: 32px;
+}
+.howwework_hero .home_hero_details_title p {
+	font-size: 17px;
+	line-height: 25px;
+	margin-top: 12px;
+	max-width: 264px;
+}
+.howwework_hero .home_hero_details_btns ul li a {
+	padding: 14px 26px;
+	font-size: 16px;
+}
+.howwework_hero .home_hero_details {
+	padding: 70px 0;
+}
+.home_hero_slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	/* transform: rotate(180deg); */
+	transform: scaleX(-1);
+}
+.contact_page_form {
+	border-left: 0 solid #ddd;
+}
+.contact_page_form_main {
+	max-width: 100%;
+	float: left;
+}
+.contact_page_details_info {
+	margin-bottom: 33px;
+}
+.contact_page_details_title h1 {
+	font-size: 30px;
+}
+.faq_ques_left_list {
+	display: none !important;
+}
+.faq_ques_box_wrapper {
+	padding-left: 0;
+	border-left: 0 solid #eee;
+}
+.faq_option_box {
+	display: block;
+}
+.faq_ques_area .height-space {
+	height: 40px !important;
+}
+.single_faq_list_box_title h2 {
+	font-size: 19px;
+}
+.single_faq_list_box_ques_title h2 {
+	font-size: 16px;
+}
+.faq_hero .home_hero_details_title h2, .faq_hero .home_hero_details_title h1 {
+	font-size: 33px;
+}
+.faq_hero .home_hero_details {
+	padding: 45px 0;
+}
+.normal_page_head h1 {
+	font-size: 30px;
+}
+.normal_page_head p {
+	font-size: 16px;
+	margin-top: 10px;
+}
+.hero_breadcrumb {
+	margin-bottom: 20px;
+}
+.normal_page_head {
+	padding-bottom: 30px;
+}
+.page_left_list {
+	padding-top: 30px;
+}
+.page_left_list ul li {
+	margin-bottom: 9px;
+}
+.page_content_wrapper {
+	padding-left: 0;
+	border-left: 0 solid #eee;
+	padding-top: 30px;
+}
+.page_left_list {
+	position: static;
+}
+}
+
+
+@media only screen and (max-width: 500px ) {
+.home_service_wrapper {
+	padding: 0 0;
+}
+.home_service_wrapper .row > div {
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+}

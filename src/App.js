@@ -1,4 +1,3 @@
-import "./App.css";
 // slick.js
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,6 +8,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
+import "./assets/style.css"
+import "./assets/css/default-theme.css"
+import "./assets/css/responsive.css"
 
 function App() {
   return (
