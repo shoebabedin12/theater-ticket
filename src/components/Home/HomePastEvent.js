@@ -1,6 +1,40 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 
 const HomePastEvent = () => {
+    const settings = {
+        autoplay: true,
+		infinite: true,
+		arrows: false,
+		dots: false,
+		autoplaySpeed: 15000,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		centerMode: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		centerPadding: '0px',
+		customPaging : function(slider, i) {
+			
+		},
+		responsive: [
+			{
+			  breakpoint: 1000,
+			  settings: {
+				slidesToShow: 3,
+				swipeToSlide: true,
+			  }
+			},
+			{
+			  breakpoint: 500,
+			  settings: {
+				slidesToShow: 1,
+				swipeToSlide: true,
+			  }
+			},
+		  ]
+      };
     return (
         <>
             <div className="home_past_event_area oflow-hd">
@@ -16,7 +50,7 @@ const HomePastEvent = () => {
 				<div className="row">
 					<div className="col-12">
 						<div className="home_past_event_wrapper">
-							<div className="home_past_event_main">
+							<Slider {...settings} className="home_past_event_main">
 								<div className="home_past_event_single floatleft oflow-hd">
 									<div className="home_past_event_single_bg oflow-hd">
 										<div className="home_past_event_single_img oflow-hd">
@@ -139,7 +173,7 @@ const HomePastEvent = () => {
 									</div>
 								</div>
 								
-							</div>
+							</Slider>
 						</div>
 					</div>
 				</div>
