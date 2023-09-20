@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import HomePastEventData from "../../assets/data/HomePastEventData";
+import DividerHeight from "../SectionDevider/DividerHeight";
 
 const HomePastEvent = () => {
   const settings = {
@@ -36,10 +37,7 @@ const HomePastEvent = () => {
   return (
     <>
       <div className="home_past_event_area oflow-hd">
-        <div
-          style={{ height: "100px" }}
-          className="divider_height oflow-hd"
-        ></div>
+      <DividerHeight />
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -76,10 +74,7 @@ const HomePastEvent = () => {
             </div>
           </div>
         </div>
-        <div
-          style={{ height: "100px" }}
-          className="divider_height oflow-hd"
-        ></div>
+        <DividerHeight />
       </div>
     </>
   );
