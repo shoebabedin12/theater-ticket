@@ -16,7 +16,9 @@ const HomePastEvent = () => {
     pauseOnFocus: false,
     pauseOnHover: false,
     centerPadding: "0px",
-    customPaging: function (slider, i) {},
+    customPaging : function(slider, i) {
+			return  '';
+		},
     responsive: [
       {
         breakpoint: 1000,
