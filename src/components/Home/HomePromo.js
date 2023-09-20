@@ -1,4 +1,5 @@
 import React from "react";
+import HomePromoData from "../../assets/data/HomePromoData";
 
 const HomePromo = () => {
   return (
@@ -6,57 +7,24 @@ const HomePromo = () => {
       <div className="home_promo_area">
         <div className="container">
           <div className="row">
-            <div className="col-4">
-              <div className="home_single_promo oflow-hd">
-                <div className="home_single_promo_img oflow-hd">
-                  <img
-                    src={require("./../../assets/images/icon.png")}
-                    alt="img"
-                  />
-                </div>
-                <div className="home_single_promo_details oflow-hd">
-                  <h2>Dummy Text 1</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. At tortor arcu morbi
-                    sed etiam feugiat.{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div className="home_single_promo oflow-hd">
-                <div className="home_single_promo_img oflow-hd">
-                  <img
-                    src={require("./../../assets/images/icon.png")}
-                    alt="img"
-                  />
-                </div>
-                <div className="home_single_promo_details oflow-hd">
-                  <h2>Dummy Text 1</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. At tortor arcu morbi
-                    sed etiam feugiat.{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div className="home_single_promo oflow-hd">
-                <div className="home_single_promo_img oflow-hd">
-                  <img
-                    src={require("./../../assets/images/icon.png")}
-                    alt="img"
-                  />
-                </div>
-                <div className="home_single_promo_details oflow-hd">
-                  <h2>Dummy Text 1</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. At tortor arcu morbi
-                    sed etiam feugiat.{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
+            {HomePromoData.map(item =>
+               <div key={item.id} className="col-4">
+               <div className="home_single_promo oflow-hd">
+                 <div className="home_single_promo_img oflow-hd">
+                   <img
+                     src={require(`./../../assets/images/${item.img}`)}
+                     alt="img"
+                   />
+                 </div>
+                 <div className="home_single_promo_details oflow-hd">
+                   <h2>{item.title}</h2>
+                   <p>
+                     {item.desc}
+                   </p>
+                 </div>
+               </div>
+             </div>
+              )}
           </div>
         </div>
       </div>

@@ -4,51 +4,39 @@ import HomePromo from "../components/Home/HomePromo";
 import HomeEvent from "../components/Home/HomeEvent";
 import HomePastEvent from "../components/Home/HomePastEvent";
 import HomeSignup from "../components/Home/HomeSignup";
+import HeaderFix from "../components/SectionDevider/HeaderFix";
+import DividerHeight from "../components/SectionDevider/DividerHeight";
 
 const Home = () => {
   return (
     <>
-      <div style={{ height: "30px" }} className="header_fix oflow-hd"></div>
+      {/* section devider */}
+      <HeaderFix />
       {/* Home Hero */}
       <HomeHero />
-      <div
-        style={{ height: "100px" }}
-        className="divider_height oflow-hd"
-      ></div>
+      {/* section devider */}
+      <DividerHeight />
       {/*  Home Promo */}
       <HomePromo />
-
-      <div
-        style={{ height: "100px" }}
-        className="divider_height oflow-hd"
-      ></div>
+      {/* section devider */}
+      <DividerHeight />
 
       {/* Home Event */}
 
       <HomeEvent />
-
-      <div
-        style={{ height: "100px" }}
-        className="divider_height oflow-hd"
-      ></div>
-
+      {/* section devider */}
+      <DividerHeight />
       {/* Home Past Event */}
 
       <HomePastEvent />
-
-      <div
-        style={{ height: "100px" }}
-        className="divider_height oflow-hd"
-      ></div>
+      {/* section devider */}
+      <DividerHeight />
 
       {/* Home Sign up */}
 
       <HomeSignup />
-
-      <div
-        style={{ height: "100px" }}
-        className="divider_height oflow-hd"
-      ></div>
+      {/* section devider */}
+      <DividerHeight />
     </>
   );
 };

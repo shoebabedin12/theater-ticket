@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import HomePastEventData from "../../assets/data/HomePastEventData";
 
 const HomePastEvent = () => {
   const settings = {
@@ -49,170 +50,35 @@ const HomePastEvent = () => {
             </div>
           </div>
         </div>
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-12">
-                <div className="home_past_event_wrapper">
-                  <Slider {...settings} className="home_past_event_main">
-                    <div className="home_past_event_single floatleft oflow-hd">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-12">
+              <div className="home_past_event_wrapper">
+                <Slider {...settings} className="home_past_event_main">
+                  {HomePastEventData.map((item) => (
+                    <div
+                      key={item.id}
+                      className="home_past_event_single floatleft oflow-hd"
+                    >
                       <div className="home_past_event_single_bg oflow-hd">
                         <div className="home_past_event_single_img oflow-hd">
                           <img
-                            src={require("./../../assets/images/pevent.png")}
+                            src={require(`./../../assets/images/${item.img}`)}
                             alt="img"
                           />
                         </div>
                         <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
+                          <h3>{item.title}</h3>
+                          <h4>By {item.organized_by}</h4>
                         </div>
                       </div>
                     </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="home_past_event_single floatleft oflow-hd">
-                      <div className="home_past_event_single_bg oflow-hd">
-                        <div className="home_past_event_single_img oflow-hd">
-                          <img
-                            src={require("./../../assets/images/pevent.png")}
-                            alt="img"
-                          />
-                        </div>
-                        <div className="home_past_event_single_details oflow-hd">
-                          <h3>Dameer & Fuad Presents SANJOY concert</h3>
-                          <h4>By BDMusic</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </Slider>
-                </div>
+                  ))}
+                </Slider>
               </div>
             </div>
           </div>
+        </div>
         <div
           style={{ height: "100px" }}
           className="divider_height oflow-hd"

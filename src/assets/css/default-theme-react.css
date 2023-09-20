@@ -5,3 +5,7 @@
 .home_hero_area .slick-dots{
     width: auto;
 }
+
+.home_hero_area .slick-dots li button:before{
+    display: none;
+}
