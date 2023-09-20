@@ -20,20 +20,15 @@ const Home = () => {
       <HomePromo />
       {/* section devider */}
       <DividerHeight />
-
       {/* Home Event */}
-
       <HomeEvent />
       {/* section devider */}
       <DividerHeight />
       {/* Home Past Event */}
-
       <HomePastEvent />
       {/* section devider */}
       <DividerHeight />
-
       {/* Home Sign up */}
-
       <HomeSignup />
       {/* section devider */}
       <DividerHeight />
