@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HomeHero from "../components/Home/HomeHero";
 import HomePromo from "../components/Home/HomePromo";
 import HomeEvent from "../components/Home/HomeEvent";
@@ -6,8 +6,10 @@ import HomePastEvent from "../components/Home/HomePastEvent";
 import HomeSignup from "../components/Home/HomeSignup";
 import HeaderFix from "../components/SectionDevider/HeaderFix";
 import DividerHeight from "../components/SectionDevider/DividerHeight";
+import AuthModal from "../components/AuthModal/AuthModal";
 
 const Home = () => {
+  
   return (
     <>
       {/* section devider */}
@@ -32,6 +34,7 @@ const Home = () => {
       <HomeSignup />
       {/* section devider */}
       <DividerHeight />
+      
     </>
   );
 };

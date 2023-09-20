@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({openLoginModal}) => {
+  const [user, setUser] = useState(false);
   return (
     <>
       <div className="header_area">
@@ -179,12 +180,27 @@ const Header = () => {
               <div className="col-12">
                 <div className="header_bottom_logo floatleft oflow-hd">
                   <Link to="">
-                    <img src={require("./../../assets/images/logo.png")} alt="img" />
+                    <img
+                      src={require("./../../assets/images/logo.png")}
+                      alt="img"
+                    />
                   </Link>
                 </div>
-                <div className="header_bottom_btn floatright oflow-hd">
-                  <Link to="">Sign In</Link>
-                </div>
+                {user ? (
+                  <div class="header_userD floatright oflow-hd">
+                    <Link class="usermenubtn" to="#">
+                      <span>Hello, Fahim</span>
+                      <img
+                        src={require("./../../assets/images/user.png")}
+                        alt="img"
+                      />
+                    </Link>
+                  </div>
+                ) : (
+                  <div className="header_bottom_btn floatright oflow-hd">
+                    <Link to="" onClick={openLoginModal}>Sign In</Link>
+                  </div>
+                )}
                 <div className="header_bottom_menu floatright oflow-hd">
                   <ul>
                     <li className="menu_item_active">
