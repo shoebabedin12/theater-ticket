@@ -1,0 +1,7 @@
+.home_hero_area.oflow-hd  .container-fluid{
+    padding-right: 0px; 
+    padding-left: 0px;
+}
+.home_hero_area .slick-dots{
+    width: auto;
+}

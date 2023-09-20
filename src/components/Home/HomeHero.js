@@ -28,30 +28,26 @@ function SampleNextArrow(props) {
 const HomeHero = () => {
   const settings = {
     autoplay: true,
-    infinite: true,
-    arrows: false,
-    dots: true,
-    autoplaySpeed: 15000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: false,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    // customPaging: function (slider, i) {
-    //   return "";
-    // },
-    customPaging: function(i) {
-        return (
-          <Link>
-            <img src={`/abstract0${i + 1}.jpg`} alt=""/>
-          </Link>
-        );
-      },
+		infinite: true,
+		arrows: false,
+		dots: true,
+		autoplaySpeed: 15000,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+    className: "center",
+		centerMode: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		centerPadding: '140px',
+		customPaging : function(slider, i) {
+			return  (<></>);
+		},
+   
   };
   return (
     <>
       <div className="home_hero_area oflow-hd">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-12">
               <div className="home_hero_slider_wrapper">
