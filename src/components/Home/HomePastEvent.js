@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import HomePastEventData from "../../assets/data/HomePastEventData";
 
@@ -15,7 +14,7 @@ const HomePastEvent = () => {
     centerMode: true,
     pauseOnFocus: false,
     pauseOnHover: false,
-    centerPadding: "90px",
+    centerPadding: "0px",
     customPaging: function (slider, i) {},
     responsive: [
       {
@@ -49,8 +48,6 @@ const HomePastEvent = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="container-fluid">
           <div className="row">
             <div className="col-12">
               <div className="home_past_event_wrapper">

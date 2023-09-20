@@ -34,17 +34,16 @@ const HomeHero = () => {
     autoplaySpeed: 15000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    className: "center",
-    centerMode: true,
+    centerMode: false,
     pauseOnFocus: false,
     pauseOnHover: false,
-    centerPadding: "140px",
+    centerPadding: "0px",
     
   };
   return (
     <>
       <div className="home_hero_area oflow-hd">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="home_hero_slider_wrapper">
