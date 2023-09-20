@@ -38,9 +38,6 @@ const HomeHero = () => {
     pauseOnFocus: false,
     pauseOnHover: false,
     centerPadding: "0px",
-    customPaging : function(slider, i) {
-			return  '';
-		},
   };
   return (
     <>
