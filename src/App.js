@@ -1,6 +1,6 @@
 // slick.js
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick-theme.css";
 // bootstreapp.js
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
@@ -9,10 +9,10 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 // custom css styles
-import "./assets/style.css"
-import "./assets/css/default-theme.css"
-import "./assets/css/default-theme-react.css"
-import "./assets/css/responsive.css"
+import "./assets/css/default-theme-react.css";
+import "./assets/css/default-theme.css";
+import "./assets/css/responsive.css";
+import "./assets/style.css";
 
 function App() {
   return (
