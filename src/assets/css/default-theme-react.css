@@ -2,9 +2,9 @@
   width: auto;
 } */
 
-/* .home_hero_area .slick-dots li button {
+.home_hero_area .slick-dots li button {
   opacity: 0;
-} */
+}
 .slick-slide {
   float: left;
 }
