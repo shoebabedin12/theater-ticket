@@ -32,20 +32,21 @@ const Layout = () => {
     document.body.classList.remove("body-mobile");
     setUserMenuOpen(false);
   };
-   // user logout
-   const userLogout = () => {
+  // user logout
+  const userLogout = () => {
     localStorage.clear();
     window.location.reload();
   };
-  
-// switch signup modal
+
+  // switch signup modal
   const switchToSignup = () => {
     setShowLogin(false);
   };
-// switch login modal
+  // switch login modal
   const switchToLogin = () => {
     setShowLogin(true);
   };
+
   return (
     <>
       <Header openLoginModal={openLoginModal} openUserMenu={openUserMenu} />
@@ -59,7 +60,7 @@ const Layout = () => {
         closeUserMenu={closeUserMenu}
         isUserMenuOpen={isUserMenuOpen}
         userLogout={userLogout}
-        showLogin={showLogin }
+        showLogin={showLogin}
         switchToLogin={switchToLogin}
         switchToSignup={switchToSignup}
       />
