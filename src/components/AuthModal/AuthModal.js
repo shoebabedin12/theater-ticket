@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const AuthModal = ({isLoginOpen }) => {
+const AuthModal = ({isLoginOpen, closeLoginModal }) => {
   return (
     <>
       {/* <!-- User Sidebar logOut  --> */}
@@ -331,7 +331,7 @@ const AuthModal = ({isLoginOpen }) => {
         <div className="user_login_box_wrapper oflow-hd">
           <div className="user_login_box_header oflow-hd">
             <h2>Login Now</h2>
-            <button className="login_popup_cross remove-all" id="">
+            <button className="login_popup_cross remove-all" id="" onClick={closeLoginModal}>
               <svg
                 width="15"
                 height="15"

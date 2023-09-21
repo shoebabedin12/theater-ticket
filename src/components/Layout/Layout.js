@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import MobileMenuBar from "../MobileMenuBar/MobileMenuBar";
 import AuthModal from "../AuthModal/AuthModal";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
+import MobileMenuBar from "../MobileMenuBar/MobileMenuBar";
 
 const Layout = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -24,7 +24,7 @@ const Layout = () => {
       <Outlet />
       <Footer/>
       {/* auth */}
-      <AuthModal isLoginOpen={isLoginOpen }/>
+      <AuthModal isLoginOpen={isLoginOpen } closeLoginModal={closeLoginModal}/>
     </>
   );
 };
