@@ -33,7 +33,6 @@ const AuthModal = ({
     }
   };
 
-  console.log(showLogin);
   return (
     <>
       {/* <!-- User Sidebar logOut  --> */}

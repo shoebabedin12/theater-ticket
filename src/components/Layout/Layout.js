@@ -24,10 +24,12 @@ const Layout = () => {
 
   // user sidebar open
   const openUserMenu = () => {
+    document.body.classList.add("body-mobile");
     setUserMenuOpen(true);
   };
   // user sidebar close
   const closeUserMenu = () => {
+    document.body.classList.remove("body-mobile");
     setUserMenuOpen(false);
   };
    // user logout
