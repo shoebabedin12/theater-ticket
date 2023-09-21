@@ -1,17 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const AuthModal = ({isLoginOpen, closeLoginModal }) => {
+const AuthModal = ({
+  isLoginOpen,
+  closeLoginModal,
+  isUserMenuOpen,
+  openUserMenu,
+  closeUserMenu, userLogout
+}) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("email", email);
+    formData.append("password", password);
+    const loginUser = {
+      email: email,
+      password: password
+    };
+
+    console.log(loginUser);
+   
+      localStorage.setItem("User", JSON.stringify(loginUser));
+      closeLoginModal(); // Call closeUserMenu to close the user menu
+      window.location.reload();
+   
+  };
   return (
     <>
       {/* <!-- User Sidebar logOut  --> */}
-      <div className="user_menu_area oflow-hd">
+      <div
+        className={`user_menu_area oflow-hd ${
+          isUserMenuOpen ? "user_menu_area_open" : ""
+        } `}
+      >
         <div className="user_menu_logout">
-          <Link to="">Log Out</Link>
+          <Link to="" onClick={userLogout} role="button">Log Out</Link>
         </div>
         <div className="user_menu_wrapper oflow-hd">
           <div className="user_menu_head oflow-hd">
-            <button className="usermenu_cross remove-all" id="">
+            <button
+              className="usermenu_cross remove-all"
+              id=""
+              onClick={closeUserMenu}
+            >
               <svg
                 width="15"
                 height="15"
@@ -326,12 +360,22 @@ const AuthModal = ({isLoginOpen, closeLoginModal }) => {
       </div>
 
       {/* <!-- User login and Sign up Modal  --> */}
-      <div className={`oflow-at black-bg ${isLoginOpen  ? "d-block" : ""}`}></div>
-      <div className={`user_login_signup_area oflow-hd ${isLoginOpen  ? "user_login_signup_area_open" : ""}`}>
+      <div
+        className={`oflow-at black-bg ${isLoginOpen ? "d-block" : ""} ${isUserMenuOpen ? "d-block" : ""}`}
+      ></div>
+      <div
+        className={`user_login_signup_area oflow-hd ${
+          isLoginOpen ? "user_login_signup_area_open" : ""
+        }`}
+      >
         <div className="user_login_box_wrapper oflow-hd">
           <div className="user_login_box_header oflow-hd">
             <h2>Login Now</h2>
-            <button className="login_popup_cross remove-all" id="" onClick={closeLoginModal}>
+            <button
+              className="login_popup_cross remove-all"
+              id=""
+              onClick={closeLoginModal}
+            >
               <svg
                 width="15"
                 height="15"
@@ -358,7 +402,7 @@ const AuthModal = ({isLoginOpen, closeLoginModal }) => {
             </button>
           </div>
           <div className="user_login_box_content oflow-hd">
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-12">
                   <div className="user_login_box_content_single oflow-hd">
@@ -366,8 +410,8 @@ const AuthModal = ({isLoginOpen, closeLoginModal }) => {
                     <input
                       name="user_email"
                       type="email"
-                      value=""
                       placeholder="Email Address"
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                 </div>
@@ -376,9 +420,9 @@ const AuthModal = ({isLoginOpen, closeLoginModal }) => {
                     <label>Password</label>
                     <input
                       name="user_pass"
-                      type="pass"
-                      value=""
+                      type="password"
                       placeholder="Password"
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
                 </div>
@@ -404,7 +448,9 @@ const AuthModal = ({isLoginOpen, closeLoginModal }) => {
                 </div>
                 <div className="col-12">
                   <div className="user_login_box_content_single_btn oflow-hd">
-                    <button name="login">Login</button>
+                    <button type="submit" name="login">
+                      Login
+                    </button>
                   </div>
                 </div>
               </div>

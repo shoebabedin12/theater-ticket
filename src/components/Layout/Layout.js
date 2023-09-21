@@ -7,24 +7,48 @@ import MobileMenuBar from "../MobileMenuBar/MobileMenuBar";
 
 const Layout = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isUserMenuOpen, setUserMenuOpen] = useState(false);
 
+  // login modal open
   const openLoginModal = () => {
-    document.body.classList.add('body-mobile');
+    document.body.classList.add("body-mobile");
     setIsLoginOpen(true);
   };
 
+  // login modal close
   const closeLoginModal = () => {
-    document.body.classList.remove('body-mobile');
+    document.body.classList.remove("body-mobile");
     setIsLoginOpen(false);
   };
+
+  // user sidebar open
+  const openUserMenu = () => {
+    setUserMenuOpen(true);
+  };
+  // user sidebar close
+  const closeUserMenu = () => {
+    setUserMenuOpen(false);
+  };
+   // user logout
+   const userLogout = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
+  console.log(isUserMenuOpen);
   return (
     <>
-      <Header openLoginModal={openLoginModal}/>
-      <MobileMenuBar/>
+      <Header openLoginModal={openLoginModal} openUserMenu={openUserMenu} />
+      <MobileMenuBar />
       <Outlet />
-      <Footer/>
+      <Footer />
       {/* auth */}
-      <AuthModal isLoginOpen={isLoginOpen } closeLoginModal={closeLoginModal}/>
+      <AuthModal
+        isLoginOpen={isLoginOpen}
+        closeLoginModal={closeLoginModal}
+        closeUserMenu={closeUserMenu}
+        isUserMenuOpen={isUserMenuOpen}
+        userLogout={userLogout}
+      />
     </>
   );
 };

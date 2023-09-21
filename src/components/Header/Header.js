@@ -1,8 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({openLoginModal}) => {
+const Header = ({ openLoginModal, openUserMenu }) => {
   const [user, setUser] = useState(false);
+  // Retrieve the "User" item from localStorage
+  const userJSON = localStorage.getItem("User");
+
+  useEffect(() => {
+    // Check if the item exists in localStorage
+    if (userJSON) {
+      // If it exists, parse it back to an object
+      const storedUser = JSON.parse(userJSON);
+      setUser(storedUser);
+    } else {
+      console.log("User not found in localStorage");
+    }
+  }, []);
   return (
     <>
       <div className="header_area">
@@ -187,8 +200,8 @@ const Header = ({openLoginModal}) => {
                   </Link>
                 </div>
                 {user ? (
-                  <div class="header_userD floatright oflow-hd">
-                    <Link class="usermenubtn" to="#">
+                  <div className="header_userD floatright oflow-hd">
+                    <Link className="usermenubtn" to="#" onClick={openUserMenu} role="button">
                       <span>Hello, Fahim</span>
                       <img
                         src={require("./../../assets/images/user.png")}
@@ -198,7 +211,9 @@ const Header = ({openLoginModal}) => {
                   </div>
                 ) : (
                   <div className="header_bottom_btn floatright oflow-hd">
-                    <Link to="" onClick={openLoginModal}>Sign In</Link>
+                    <Link to="" onClick={openLoginModal}>
+                      Sign In
+                    </Link>
                   </div>
                 )}
                 <div className="header_bottom_menu floatright oflow-hd">
