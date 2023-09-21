@@ -411,7 +411,7 @@ const AuthModal = ({
             </button>
           </div>
           <div className="user_login_box_content oflow-hd">
-            <form action="" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-12">
                   <div className="user_login_box_content_single oflow-hd">
@@ -562,7 +562,7 @@ const AuthModal = ({
         <div className={`user_signup_box_wrapper oflow-hd ${showLogin ? "d-none" : "d-block"}`}>
           <div className="user_login_box_header oflow-hd">
             <h2>Sign Up</h2>
-            <button className="login_popup_cross remove-all" id="">
+            <button className="login_popup_cross remove-all" id="" onClick={closeLoginModal}>
               <svg
                 width="15"
                 height="15"
