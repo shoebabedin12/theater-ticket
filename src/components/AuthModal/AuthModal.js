@@ -6,7 +6,11 @@ const AuthModal = ({
   closeLoginModal,
   isUserMenuOpen,
   openUserMenu,
-  closeUserMenu, userLogout
+  closeUserMenu,
+  userLogout,
+  showLogin,
+  switchToLogin,
+  switchToSignup
 }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,26 +25,27 @@ const AuthModal = ({
       password: password
     };
 
-    console.log(loginUser);
 
     if (loginUser.email || loginUser.password !== "") {
       localStorage.setItem("User", JSON.stringify(loginUser));
       closeLoginModal(); // Call closeUserMenu to close the user menu
       window.location.reload();
     }
-   
-   
   };
+
+  console.log(showLogin);
   return (
     <>
       {/* <!-- User Sidebar logOut  --> */}
       <div
         className={`user_menu_area oflow-hd ${
           isUserMenuOpen ? "user_menu_area_open" : ""
-        } `}
+        }`}
       >
         <div className="user_menu_logout">
-          <Link to="" onClick={userLogout} role="button">Log Out</Link>
+          <Link to="" onClick={userLogout} role="button">
+            Log Out
+          </Link>
         </div>
         <div className="user_menu_wrapper oflow-hd">
           <div className="user_menu_head oflow-hd">
@@ -364,14 +369,16 @@ const AuthModal = ({
 
       {/* <!-- User login and Sign up Modal  --> */}
       <div
-        className={`oflow-at black-bg ${isLoginOpen ? "d-block" : ""} ${isUserMenuOpen ? "d-block" : ""}`}
+        className={`oflow-at black-bg ${isLoginOpen ? "d-block" : ""} ${
+          isUserMenuOpen ? "d-block" : ""
+        }`}
       ></div>
       <div
         className={`user_login_signup_area oflow-hd ${
           isLoginOpen ? "user_login_signup_area_open" : ""
         }`}
       >
-        <div className="user_login_box_wrapper oflow-hd">
+        <div className={`user_login_box_wrapper oflow-hd ${showLogin ? "d-block" : "d-none"}`}>
           <div className="user_login_box_header oflow-hd">
             <h2>Login Now</h2>
             <button
@@ -464,7 +471,9 @@ const AuthModal = ({
               </Link>
               <Link
                 className="floatright switchtosignup"
-                to="javascript:void(0)"
+                to=""
+                role="button"
+                onClick={switchToSignup}
               >
                 Create an account
               </Link>
@@ -551,7 +560,7 @@ const AuthModal = ({
             </div>
           </div>
         </div>
-        <div className="user_signup_box_wrapper oflow-hd">
+        <div className={`user_signup_box_wrapper oflow-hd ${showLogin ? "d-none" : "d-block"}`}>
           <div className="user_login_box_header oflow-hd">
             <h2>Sign Up</h2>
             <button className="login_popup_cross remove-all" id="">
@@ -637,7 +646,12 @@ const AuthModal = ({
             <div className="user_login_box_bottom">
               <p>
                 Already have an account?
-                <Link className="switchtologin" to="javascript:void(0)">
+                <Link
+                  className="switchtologin"
+                  to=""
+                  role="button"
+                  onClick={switchToLogin}
+                >
                   Login
                 </Link>
               </p>

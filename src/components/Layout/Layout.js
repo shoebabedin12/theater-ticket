@@ -8,6 +8,7 @@ import MobileMenuBar from "../MobileMenuBar/MobileMenuBar";
 const Layout = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isUserMenuOpen, setUserMenuOpen] = useState(false);
+  const [showLogin, setShowLogin] = useState(true);
 
   // login modal open
   const openLoginModal = () => {
@@ -34,7 +35,15 @@ const Layout = () => {
     localStorage.clear();
     window.location.reload();
   };
-  console.log(isUserMenuOpen);
+  
+// switch signup modal
+  const switchToSignup = () => {
+    setShowLogin(false);
+  };
+// switch login modal
+  const switchToLogin = () => {
+    setShowLogin(true);
+  };
   return (
     <>
       <Header openLoginModal={openLoginModal} openUserMenu={openUserMenu} />
@@ -48,6 +57,9 @@ const Layout = () => {
         closeUserMenu={closeUserMenu}
         isUserMenuOpen={isUserMenuOpen}
         userLogout={userLogout}
+        showLogin={showLogin }
+        switchToLogin={switchToLogin}
+        switchToSignup={switchToSignup}
       />
     </>
   );
