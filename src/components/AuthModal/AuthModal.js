@@ -22,10 +22,13 @@ const AuthModal = ({
     };
 
     console.log(loginUser);
-   
+
+    if (loginUser.email || loginUser.password !== "") {
       localStorage.setItem("User", JSON.stringify(loginUser));
       closeLoginModal(); // Call closeUserMenu to close the user menu
       window.location.reload();
+    }
+   
    
   };
   return (
