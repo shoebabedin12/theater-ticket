@@ -94,6 +94,12 @@
 	.home_promo_area {
 		text-align: center;
 		overflow: auto;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.home_promo_area::-webkit-scrollbar {
+		width: 0 !important;
+		display: none;
 	}
 	.home_promo_area .row {
 		margin-right: 0;
