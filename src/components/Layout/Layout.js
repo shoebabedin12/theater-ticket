@@ -4,6 +4,7 @@ import AuthModal from "../AuthModal/AuthModal";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import MobileMenuBar from "../MobileMenuBar/MobileMenuBar";
+import MobileBottomNav from "../MobileBottomNav/MobileBottomNav";
 
 const Layout = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -64,6 +65,7 @@ const Layout = () => {
         switchToLogin={switchToLogin}
         switchToSignup={switchToSignup}
       />
+      <MobileBottomNav/>
     </>
   );
 };

@@ -24,7 +24,7 @@ const Footer = () => {
                     egestas.
                   </p>
                 </div>
-                <div className="footer_widget_copyright oflow-hd">
+                <div className="footer_widget_copyright oflow-hd desktopview">
                   © 2023 TicketSystem. All rights reserved
                 </div>
               </div>
@@ -180,6 +180,9 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
+              <div className="footer_widget_copyright oflow-hd mobileview">
+              © 2023 TicketSystem. All rights reserved
+            </div>
             </div>
           </div>
         </div>

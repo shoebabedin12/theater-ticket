@@ -15,7 +15,7 @@ const HomeSignup = () => {
                 />
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-md-6">
               <div className="home_signup_img_details oflow-hd">
                 <div className="home_signup_img_details_main oflow-hd">
                   <h2>A new ERA of entertainment ticketing</h2>
