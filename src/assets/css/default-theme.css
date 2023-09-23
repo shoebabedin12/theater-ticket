@@ -75,6 +75,9 @@
 	height: 44px;
 	width: auto;
 }
+.header_bottom_btn svg{
+	display: none;
+}
 .header_bottom_btn {
 	margin-top: 1px;
 	margin-left: 46px;
@@ -147,6 +150,9 @@
 /** ------------------------------------------------------------------
 						Footer
 ------------------------------------------------------------------ **/
+.mobileview {
+	display: none;
+}
 .footer_area {
 	background-color: #001D3F;
 	background-image: url(../images/footer-bg.png);
@@ -956,4 +962,40 @@ text-transform: uppercase;
 	display: block;
 	text-align: center;
 	padding: 18px 15px;
+}
+.mobile_bottom_navigation_area {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #FFF;
+box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.11);
+z-index: 999;
+display: none;
+}
+.single_mobile_navigation {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+.single_mobile_navigation_title {
+	margin-top: 2px;
+	color: #000;
+	font-family: Gilroy;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 130.769% ; /* 130.769% */
+}
+.single_mobile_navigation a {
+	display: inline-block;
+	opacity: 0.3;
+}
+.single_mobile_navigation a.active {
+	opacity: 1;
+}
+.single_mobile_navigation a.active svg path {
+	fill: #F67905 !important;
+}
+.single_mobile_navigation a.active .single_mobile_navigation_title {
+	color: #F67905;
 }
