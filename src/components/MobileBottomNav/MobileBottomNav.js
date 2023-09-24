@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const MobileBottomNav = () => {
+  const [menuBox, setMenuBox] = useState(false)
+
+
+  const OpenMobileMenu = () =>{
+    document.body.classList.add("body-mobile");
+    setMenuBox(true);
+  }
+
+  const CloseMobileMenu = () =>{
+    document.body.classList.remove("body-mobile");
+    setMenuBox(false);
+  }
   return (
     <>
       <div className="mobile_bottom_navigation_area oflow-hd">
@@ -62,7 +74,7 @@ const MobileBottomNav = () => {
             </div>
             <div className="col-4">
               <div className="single_mobile_navigation oflow-hd">
-                <Link className="openmobilemenu" to="">
+                <Link className="openmobilemenu" to="" onClick={OpenMobileMenu}>
                   <div className="single_mobile_navigation_icon oflow-hd">
                     <svg
                       width="26"
@@ -94,8 +106,8 @@ const MobileBottomNav = () => {
         </div>
       </div>
 
-      <div className="mobile_menu_box_area">
-        <button className="mobile_menu_box_Cross remove-all" id="">
+      <div className={`mobile_menu_box_area ${menuBox ? "mobile_menu_box_area_open" : ""}`}>
+        <button className="mobile_menu_box_Cross remove-all" id="" onClick={CloseMobileMenu}>
           <svg
             width="25"
             height="25"
