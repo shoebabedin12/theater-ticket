@@ -93,6 +93,55 @@ const MobileBottomNav = () => {
           </div>
         </div>
       </div>
+
+      <div className="mobile_menu_box_area">
+        <button className="mobile_menu_box_Cross remove-all" id="">
+          <svg
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_535_2)">
+              <path
+                d="M1.22093 25.0002C0.979466 25.0002 0.743411 24.9286 0.542626 24.7945C0.34184 24.6604 0.185345 24.4697 0.0929338 24.2466C0.000522909 24.0236 -0.0236515 23.7781 0.0234685 23.5413C0.0705884 23.3044 0.186886 23.0869 0.35765 22.9162L22.9162 0.357583C23.1452 0.128626 23.4557 0 23.7795 0C24.1033 0 24.4139 0.128626 24.6428 0.357583C24.8718 0.586539 25.0004 0.897071 25.0004 1.22086C25.0004 1.54466 24.8718 1.85519 24.6428 2.08415L2.08421 24.6427C1.97095 24.7562 1.83638 24.8462 1.68823 24.9076C1.54008 24.9689 1.38128 25.0004 1.22093 25.0002Z"
+                fill="black"
+              />
+              <path
+                d="M23.7795 25.0002C23.6191 25.0004 23.4603 24.9689 23.3122 24.9076C23.164 24.8462 23.0294 24.7562 22.9162 24.6427L0.357583 2.08415C0.128626 1.85519 0 1.54466 0 1.22086C0 0.897071 0.128626 0.586539 0.357583 0.357583C0.586539 0.128626 0.897071 0 1.22086 0C1.54466 0 1.85519 0.128626 2.08415 0.357583L24.6427 22.9162C24.8135 23.0869 24.9298 23.3044 24.9769 23.5413C25.024 23.7781 24.9999 24.0236 24.9075 24.2466C24.815 24.4697 24.6586 24.6604 24.4578 24.7945C24.257 24.9286 24.0209 25.0002 23.7795 25.0002Z"
+                fill="black"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_535_2">
+                <rect width="25" height="25" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+        <div className="mobile_menu_box_content oflow-hd">
+          <div className="mobile_menu_box_content_img oflow-hd">
+            <img src={require("./../../assets/images/logo.png")} alt="img" />
+          </div>
+          <div className="mobile_menu_box_content_menu oflow-hd">
+            <ul>
+              <li className="menu_item_active">
+                <Link to="">Home</Link>
+              </li>
+              <li>
+                <Link to="">Explore Events</Link>
+              </li>
+              <li>
+                <Link to="">Partnership</Link>
+              </li>
+              <li>
+                <Link to="">Who We Are</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
